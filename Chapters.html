@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        .navbar {
+            background: rgb(224, 218, 219);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            border: 2px solid rgb(0, 0, 0);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000; 
+        }
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px; 
+            margin: 0 auto; 
+        }
+        .logo a {
+            font-size: 35px;
+            font-weight: 600;
+            color: black;
+            margin-right: 50;
+        }
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+        li a {
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        button {
+            background-color: rgb(0, 0, 0);
+            border-radius: 30px;
+            padding: 12px  15px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.2s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+        button:hover {
+            transform: scale(1.10);
+        }
+        button a {
+            color: white;
+            font-weight: bold;
+            font-size: large;
+        }
+        body {
+            background: linear-gradient(to bottom right, rgb(227, 189, 123), rgb(245, 55, 245));
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 80px;
+        }
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            margin-top: 50px;
+            border-collapse: collapse;
+            border-radius: 15px;
+        }
+        th, td {
+            border: 2px solid #343030;
+            text-align: center;
+            padding: 10px;
+            height: 75px;
+        }
+        img {
+            width: 400px;
+            height: 300px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        .End {
+            background-color: white;
+            border: 2px solid black;
+            height: 150px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            box-sizing: border-box;
+            margin-top: 150px;
+        }
+        .Description{
+            display: flex;
+            align-items: center;
+        }
+        #TuneUpPiano {
+            font-size: 6rem;
+            margin-right: auto;
+        }
+        #Icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-right: 20px;
+        }
+        .fa-solid.fa-house, .fa-brands.fa-square-instagram, .fa-solid.fa-rocket, .fa-solid.fa-phone {
+            color: midnightblue;
+        }
+        .fa-solid.fa-house:hover, .fa-brands.fa-square-instagram:hover, .fa-solid.fa-rocket:hover, .fa-solid.fa-phone:hover {
+            color: blue;
+        }
+        .icon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .icon-container a {
+            text-decoration: none;
+        }
+        .icon-label {
+            font-size: 0.8rem;
+            margin-top: 5px;
+            color: black;
+        }
+        .Labels {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            margin-top: 10px;
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
+        .Labels p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="Log in Page.html">TuneUpPiano</a></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" style="text-decoration: underline;">Get started</a></li>
+                <li><a href="Log in Page.html">Log in</a></li>
+                <button>
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <table border="1" style="background-color: beige; font-family: monospace; font-weight: bold;" class="Chapters">
+        <tr align="center" style="background-color: aqua; height: 100px; font-size: 1.5em;">
+            <th width="100" style="text-decoration: underline;"> Chapters (Color coded in difficulty) </th>
+        </tr>
+        <tr align="center" style="background-color: aquamarine; height: 40px;">
+            <td width="100"> <a href="Basics Chapter 1.html" style="color: black;"> Getting the basics </a></td>
+        </tr> 
+        <tr align="center" style="background-color: rgb(168, 255, 127);">
+            <td width="100"><a href="Introduction Chapter 2.html" style="color: black;"> Introduction to music theory </a> </td>
+        </tr> 
+        <tr align="center" style="background-color: rgb(168, 255, 127);">
+            <td width="100"> <a href="Usage of musical theory 3.html" style="color: black;"> How to use music theory</a></td>
+        </tr> 
+        <tr align="center" style="background-color: rgb(227, 255, 127);">
+            <td width="100"> <a href="Musical reading 4.html" style="color: black;"> Music reading! </a></td>
+        </tr> 
+        <tr align="center" style="background-color: rgb(227, 255, 127);">
+            <td width="100"> <a href="Audio listening 5.html" style="color: black;"> Audio listening! </a></td>
+        </tr> 
+        <tr align="center" style="background-color: rgb(255, 170, 127);">
+            <td width="100"> <a href="Advanced theory 6.html" style="color: black;"> Compelxity in theory </a> </td>
+        </tr> 
+        <tr align="center" style="background-color: rgb(255, 146, 127);">
+            <td width="100"> <a href="Application 7.html" style="color: black;"> Applicance of theory </a></td>
+        </tr> 
+        <tr align="center" style="background-color: rgb(255, 127, 127);">
+            <td width="100"> <a href="Final unit quiz 8.html" style="color: black;"> Final unit </a> </td>
+        </tr> 
+
+    </table>
+</table>
+    <footer class="End">
+        <p id="TuneUpPiano">TuneUpPiano</p>
+        <div id="Icons">
+            <div class="icon-container">
+                <a href="index.html">
+                    <i class="fa-solid fa-house fa-3x"></i>
+                </a>
+                <p class="icon-label">Home</p>
+            </div>
+            <div class="icon-container">
+                <a href="https://instagram.com">
+                    <i class="fa-brands fa-square-instagram fa-3x"></i>
+                </a>
+                <p class="icon-label">Instagram</p>
+            </div>
+            <div class="icon-container">
+                <a href="Chapters.html">
+                    <i class="fa-solid fa-rocket fa-3x"></i>
+                </a>
+                <p class="icon-label">Getting started</p>
+            </div>
+            <div class="icon-container">
+                <a href="About us.html">
+                    <i class="fa-solid fa-phone fa-3x"></i>
+                </a>
+                <p class="icon-label">About us</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

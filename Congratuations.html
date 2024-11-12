@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        .navbar {
+            background: rgb(224, 218, 219);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            border: 2px solid rgb(0, 0, 0);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000; 
+        }
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px; 
+            margin: 0 auto; 
+        }
+        .logo a {
+            font-size: 35px;
+            font-weight: 600;
+            color: black;
+            margin-right: 50;
+        }
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+        li a {
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        button {
+            background-color: rgb(0, 0, 0);
+            border-radius: 30px;
+            padding: 12px  15px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.2s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+        button:hover {
+            transform: scale(1.10);
+        }
+        #button a {
+            color: rgba(0, 0, 0, 0);
+            font-weight: bold;
+            font-size: large;
+        }
+        body {
+            background: linear-gradient(to bottom right, rgb(5, 255, 205), rgb(245, 55, 217));
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 80px;
+        }
+        .black-square {
+            width: 100%;
+            height: 250px;
+            background-color: black;
+            position: relative;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 0 0 100px rgba(0, 0, 0, 0.8);
+            z-index: 0;
+            margin-bottom: 150px;
+        }
+        .shine {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8));
+            animation: shine-animation 4s infinite linear; 
+        }
+
+        @keyframes shine-animation {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            margin-top: 50px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 2px solid #343030;
+            text-align: center;
+            padding: 10px;
+        }
+        img {
+            width: 400px;
+            height: 300px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+
+        }
+        .Description{
+            display: flex;
+            align-items: center;
+        }
+        .End {
+            background-color: white;
+            border: 2px solid black;
+            height: 150px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
+        #TuneUpPiano {
+            font-size: 6rem;
+            margin-right: auto;
+        }
+        #Icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-right: 20px;
+        }
+        .fa-solid.fa-house, .fa-brands.fa-square-instagram, .fa-solid.fa-rocket, .fa-solid.fa-phone {
+            color: midnightblue;
+        }
+        .fa-solid.fa-house:hover, .fa-brands.fa-square-instagram:hover, .fa-solid.fa-rocket:hover, .fa-solid.fa-phone:hover {
+            color: blue;
+        }
+        .icon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .icon-container a {
+            text-decoration: none;
+        }
+        .icon-label {
+            font-size: 0.8rem;
+            margin-top: 5px;
+            color: black;
+        }
+        .Labels {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            margin-top: 10px;
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
+        .Labels p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#">TuneUpPiano</a></div>
+            <ul>
+                <li><a href="#" style="text-decoration: underline">Congratulations!</a></li>
+                <li><a href="About us.html">About us</a></li>
+                <li><a href="Log in Page.html">Log in</a></li>
+                <button>
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="Description">
+    <img src="Images/trophy.png" alt="Image" style="border-radius: 15px;">
+    <pre style="font-size: 1.7em; color: rgb(49, 44, 33); padding-left: 300px; padding-top: 20px; font-weight: bold;"> 
+Congratulations on completing the course!
+
+Whether you cheated or not, depends on you
+
+but I hope that you learned something
+
+from this course. I hope you plan to keep
+
+pursuing your piano career. Keep going champ!
+
+The button below will redirect you to the Home
+
+page. Feel free to come back to revise anytime!
+    </pre>
+</div>
+<div class="black-square">
+    <div class="shine"></div>
+    <a href="index.html">
+        <button style="background-color: white; color: black; border-radius: 15px; width: 200px; height: 85px; font-size: 1.6em; font-family: monospace;">
+            Back to home
+        </button>
+    </a>
+</div>
+
+
+    <footer class="End">
+        <p id="TuneUpPiano">TuneUpPiano</p>
+        <div id="Icons">
+            <div class="icon-container">
+                <a href="index.html">
+                    <i class="fa-solid fa-house fa-3x"></i>
+                </a>
+                <p class="icon-label">Home</p>
+            </div>
+            <div class="icon-container">
+                <a href="https://instagram.com">
+                    <i class="fa-brands fa-square-instagram fa-3x"></i>
+                </a>
+                <p class="icon-label">Instagram</p>
+            </div>
+            <div class="icon-container">
+                <a href="Chapters.html">
+                    <i class="fa-solid fa-rocket fa-3x"></i>
+                </a>
+                <p class="icon-label">Getting started</p>
+            </div>
+            <div class="icon-container">
+                <a href="About us.html">
+                    <i class="fa-solid fa-phone fa-3x"></i>
+                </a>
+                <p class="icon-label">About us</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
